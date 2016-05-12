@@ -40,6 +40,7 @@ class VtvController extends Controller
          *  should edit Model with $fillable attribute
          *  do same with create new record
          *  $item->create($request->all());
+         *  https://laravel.com/docs/5.2/eloquent#mass-assignment
          */
         $item->update($request->all());
 
