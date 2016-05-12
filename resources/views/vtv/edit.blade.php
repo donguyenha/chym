@@ -28,6 +28,11 @@
         </div>
 
         <div class="form-group">
+            {{ Form::label('copyright', 'Copyright') }}
+            {{ Form::text('copyright', $item->copyright, ['class' => 'form-control']) }}
+        </div>
+
+        <div class="form-group">
             {{ Form::label('link_mp4', 'Link MP4') }}
             {{ Form::text('link_mp4', $item->link_mp4, ['class' => 'form-control']) }}
         </div>
