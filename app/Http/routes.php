@@ -11,6 +11,8 @@
 |
 */
 
+Route::resource('posts', 'VtvController');
+
 Route::get('/', function () {
     return view('welcome');
 });
