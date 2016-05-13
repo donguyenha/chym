@@ -10,6 +10,7 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+Route::get('posts/{post}/yt', 'VtvController@getYT')->name('posts.yt');
 
 Route::resource('posts', 'VtvController');
 

@@ -8,6 +8,9 @@ use App\Http\Requests;
 
 use App\Vtv;
 
+use Storage;
+
+use Session;
 
 class VtvController extends Controller
 {
@@ -46,5 +49,14 @@ class VtvController extends Controller
 
         //  https://laravel.com/docs/5.2/responses#redirecting-named-routes
         return redirect()->route('posts.show', ['id' => $item->id]);
+    }
+
+    public function getYT($id)
+    {
+        $item = Vtv::findOrFail($id);
+        Storage::put(str_slug($item->title), json_encode($item, JSON_UNESCAPED_UNICODE));
+        //dd($item);
+        Session::set('getYT', 'Create file successfully');
+        return redirect()->route('posts.index');
     }
 }
