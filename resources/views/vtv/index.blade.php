@@ -27,7 +27,7 @@
                 <td>
                     <a href="{{ route('posts.edit', ['id' => $item->id]) }}" class="btn btn-primary" target="_blank">Edit</a>
                     <a href="{{ route('posts.show', ['id' => $item->id]) }}" class="btn btn-default" target="_blank">Show</a>
-                    <a href="{{ route('posts.yt', ['id' => $item->id]) }}" class="btn btn-danger" target="_blank">YT</a>
+                    <a href="{{ route('posts.yt', ['id' => $item->id]) }}" class="btn btn-danger">YT</a>
                 </td>
             </tr>
         @endforeach
