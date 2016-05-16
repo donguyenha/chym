@@ -60,10 +60,10 @@ class VtvController extends Controller
         return redirect()->route('posts.index');
     }
 
-    public function getyt_update($id)
+    public function getyt_update($id, $yt_id)
     {
         $item = Vtv::findOrFail($id);
-        $item->update(['yt_status' => 0]);
+        $item->update(['yt_status' => 0, 'yt_id' => $yt_id]);
         Storage::delete(str_slug($item->title));
         return  $item;
     }
