@@ -64,6 +64,7 @@ class VtvController extends Controller
     {
         $item = Vtv::findOrFail($id);
         $item->update(['yt_status' => 0]);
+        Storage::delete(str_slug($item->title));
         return  $item;
     }
 }
