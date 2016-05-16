@@ -11,7 +11,7 @@
 |
 */
 Route::get('posts/{post}/yt', 'VtvController@getYT')->name('posts.yt');
-Route::get('posts/{post}/yt_update', 'VtvController@getyt_update')->name('posts.yt_update');
+Route::get('posts/{post}/{yt_id}/yt_update', 'VtvController@getyt_update')->name('posts.yt_update');
 
 Route::resource('posts', 'VtvController');
 
