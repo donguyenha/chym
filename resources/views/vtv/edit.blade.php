@@ -13,6 +13,11 @@
         </div>
 
         <div class="form-group">
+            {{ Form::label('yt_status', 'YT Stats') }}
+            {{ Form::text('yt_status', $item->yt_status, ['class' => 'form-control']) }}
+        </div>
+
+        <div class="form-group">
             {{ Form::label('link', 'Link') }}
             {{ Form::text('link', $item->link, ['class' => 'form-control']) }}
         </div>

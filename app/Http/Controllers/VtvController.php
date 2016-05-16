@@ -16,7 +16,7 @@ class VtvController extends Controller
 {
     public function index()
     {
-        $items = Vtv::orderBy('Ins', 'desc')->paginate();
+        $items = Vtv::where('yt_status', 0)->orderBy('Ins', 'desc')->paginate();
         return view('vtv.index', ['items' => $items]);
     }
 
@@ -31,7 +31,6 @@ class VtvController extends Controller
     {
         //dd($id);
         $item = Vtv::findOrFail($id);
-
         return view('vtv.edit', ['item' => $item]);
     }
 
@@ -51,12 +50,20 @@ class VtvController extends Controller
         return redirect()->route('posts.show', ['id' => $item->id]);
     }
 
-    public function getYT($id)
+    public function getyt($id)
     {
         $item = Vtv::findOrFail($id);
         Storage::put(str_slug($item->title), json_encode($item, JSON_UNESCAPED_UNICODE));
+        $item->update(['yt_status' => 1]);
         //dd($item);
-        Session::set('getYT', 'Create file successfully');
+        Session::flash('getYT', 'Create file successfully');
         return redirect()->route('posts.index');
+    }
+
+    public function getyt_update($id)
+    {
+        $item = Vtv::findOrFail($id);
+        $item->update(['yt_status' => 0]);
+        return  $item;
     }
 }

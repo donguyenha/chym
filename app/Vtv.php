@@ -11,6 +11,7 @@ class Vtv extends Model
     protected $fillable = [
         'title',
         'yt_id',
+        'yt_status',
         'link',
         'category_id',
         'description',
