@@ -15,6 +15,4 @@ Route::get('posts/{post}/{yt_id}/yt_update', 'VtvController@getyt_update')->name
 
 Route::resource('posts', 'VtvController');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'VtvController@index');
