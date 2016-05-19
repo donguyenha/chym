@@ -23,13 +23,11 @@ class VtvController extends Controller
     public function show($id)
     {
         $item = Vtv::findOrFail($id);
-
         return view('vtv.show', ['item' => $item]);
     }
 
     public function edit($id)
     {
-        //dd($id);
         $item = Vtv::findOrFail($id);
         return view('vtv.edit', ['item' => $item]);
     }
@@ -50,7 +48,7 @@ class VtvController extends Controller
         return redirect()->route('posts.show', ['id' => $item->id]);
     }
 
-    public function getyt(Request $request, $id)
+    public function getyt($id)
     {
         $item = Vtv::findOrFail($id);
         Storage::put(str_slug($item->title), json_encode($item, JSON_UNESCAPED_UNICODE));
