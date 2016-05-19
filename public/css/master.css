@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.ha {
+    margin: 0 0 0 1.6%;
+}
+.ha_text_align{
+    text-align: center;
+}
+.col a {
+    text-decoration: none;
+    color: #333;
+}
+h2 {
+    font-size: 20px;
+    margin-top: 0;
+}
+
+/* --- navbar ---*/
+.navbar {
+  font-size: 18px;
+  border-radius: 0;
+  background-color: #c80c18;
+  border-color: #e7e7e7;
+}
+/* --- navbar-brand element ---*/
+.alonews-brand {
+  padding: 11px;
+  border-right: 1px solid #fff;
+}
+
+.alonews-brand i{
+  color: #fff;
+  font-size: 28px;
+}
+
+.alonews-brand i:hover,
+.alonews-brand i:focus {
+  color: #fff;
+  font-weight: bolder;
+  background-color: transparent;
+}
+/* --- navbar-nav element --- */
+.navbar-default .navbar-nav > li {
+  border-right: 1px solid #fff;
+}
+
+.navbar-default .navbar-nav > li:last-child {
+  border-right: none;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #fff;
+  font-weight: bolder;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  font-weight: normal;
+  color: #fff;
+  background-color: #
+}
+
+/* --- content --- */
+@media only screen and (max-width: 991px) {
+    h2 {
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: bold;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .span_12_of_12 {
+    	width: 100%;
+    }
+
+    .span_11_of_12 {
+      	width: 91.53%;
+    }
+    .span_10_of_12 {
+      	width: 83.06%;
+    }
+
+    .span_9_of_12 {
+      	width: 74.6%;
+    }
+
+    .span_8_of_12 {
+      	width: 66.13%;
+    }
+
+    .span_7_of_12 {
+      	width: 57.66%;
+    }
+
+    .span_6_of_12 {
+      	width: 49.2%;
+    }
+
+    .span_5_of_12 {
+      	width: 40.73%;
+    }
+
+    .span_4_of_12 {
+      	width: 32.26%;
+    }
+
+    .span_3_of_12 {
+      	width: 23.8%;
+    }
+
+    .span_2_of_12 {
+      	width: 15.33%;
+    }
+
+    .span_1_of_12 {
+      	width: 6.866%;
+    }
+
+    h2 {
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: bold;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .span_12_of_12 {
+    	width: 100%;
+    }
+
+    .span_11_of_12 {
+      	width: 91.53%;
+    }
+    .span_10_of_12 {
+      	width: 83.06%;
+    }
+
+    .span_9_of_12 {
+      	width: 74.6%;
+    }
+
+    .span_8_of_12 {
+      	width: 66.13%;
+    }
+
+    .span_7_of_12 {
+      	width: 57.66%;
+    }
+
+    .span_6_of_12 {
+      	width: 49.2%;
+    }
+
+    .span_5_of_12 {
+      	width: 40.73%;
+    }
+
+    .span_4_of_12 {
+      	width: 32.26%;
+    }
+
+    .span_3_of_12 {
+      	width: 23.8%;
+    }
+
+    .span_2_of_12 {
+      	width: 15.33%;
+    }
+
+    .span_1_of_12 {
+      	width: 6.866%;
+    }
+    h2 {
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: bolder;
+    }
+    .content-detail { display: none; }
+}
