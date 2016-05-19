@@ -57,8 +57,8 @@ class VtvController extends Controller
         $item->update(['yt_status' => 1]);
 
         Session::flash('getYT', 'Create file successfully');
-
-        return back();
+        //return redirect()->route('posts.index');
+        return redirect(url()->previous());
     }
 
     public function getyt_update($id, $yt_id)
