@@ -50,14 +50,15 @@ class VtvController extends Controller
         return redirect()->route('posts.show', ['id' => $item->id]);
     }
 
-    public function getyt($id)
+    public function getyt(Request $request, $id)
     {
         $item = Vtv::findOrFail($id);
         Storage::put(str_slug($item->title), json_encode($item, JSON_UNESCAPED_UNICODE));
         $item->update(['yt_status' => 1]);
-        //dd($item);
+
         Session::flash('getYT', 'Create file successfully');
-        return redirect()->route('posts.index');
+
+        return back();
     }
 
     public function getyt_update($id, $yt_id)
