@@ -19,7 +19,7 @@
         @foreach ($items as $item)
             <tr>
                 <td>{{ $item->id }}</td>
-                <td>{{ str_limit($item->title, 40) }}</td>
+                <td>{{ str_limit($item->title, 100) }}</td>
                 <td><a href="{{ $item->link }}" target="_blank">{{ str_limit($item->link, 30) }}</td>
                 <td>{{ $item->yt_id }}</td>
                 <!--td>{{-- $item->category_id --}}</td-->
