@@ -16,7 +16,7 @@ class VtvController extends Controller
 {
     public function index()
     {
-        $items = Vtv::where('yt_status', 0)->orderBy('Ins', 'desc')->paginate();
+        $items = Vtv::where('yt_status', 0)->orderBy('created_at', 'desc')->paginate();
         return view('vtv.index', ['items' => $items]);
     }
 
